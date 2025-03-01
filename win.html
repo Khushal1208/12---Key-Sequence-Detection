@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Win Celebration</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1"></script> <!-- Confetti effect -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Click the Button to Win the Game!</h2>
+    <button onclick="winGame()">Win Game 🎮</button>
+
+    <script>
+        function winGame() {
+            celebrate(); // Trigger confetti
+        }
+
+        function celebrate() {
+            confetti({
+                particleCount: 150,
+                spread: 80,
+                origin: { y: 0.6 }
+            });
+        }
+    </script>
+
+</body>
+</html>
